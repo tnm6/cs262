@@ -1,0 +1,5 @@
+Exercise 1.1
+
+Interesting and tractable idea:
+
+Crazy: A theological or spiritual CleverBot. CalvinBot (or [insert theologian here]Bot, BuddhaBot, etc.) provides spiritual and doctrinal guidance to people in need. For example, CalvinBot will keep tabs on your percentage of heresy and warn you accordingly with gradually increasing levels of scolding. ConfessionBot, for the Catholics, is your portable "Robo-Priest" when you don't have the time or means to go to confession. Depending on denomination and faith, these bots could be ordained in their respective church or religious organization.
