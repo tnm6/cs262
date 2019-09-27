@@ -1,5 +1,7 @@
 /// Homework1 is a simple calculator app with 
 /// addition, subtraction, multiplication, and division.
+/// 
+/// Based on this tutorial by EDMT Dev: https://youtu.be/4NhLLmrB4I4
 
 import 'package:flutter/material.dart';
 
