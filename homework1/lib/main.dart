@@ -26,9 +26,9 @@ class Calculator extends State<CalculatorApp> {
 
   void _sum() {
     if (_formKey.currentState.validate()) {
-      double num1 = double.parse(_controllerNum1.text);
-      double num2 = double.parse(_controllerNum2.text);
-      double result = num1 + num2;
+      int num1 = int.parse(_controllerNum1.text);
+      int num2 = int.parse(_controllerNum2.text);
+      int result = num1 + num2;
 
       setState(() {
         _resultText = "$num1 + $num2 = $result";
@@ -37,9 +37,9 @@ class Calculator extends State<CalculatorApp> {
   }
   void _difference() {
     if (_formKey.currentState.validate()) {
-      double num1 = double.parse(_controllerNum1.text);
-      double num2 = double.parse(_controllerNum2.text);
-      double result = num1 - num2;
+      int num1 = int.parse(_controllerNum1.text);
+      int num2 = int.parse(_controllerNum2.text);
+      int result = num1 - num2;
 
       setState(() {
         _resultText = "$num1 - $num2 = $result";
@@ -48,9 +48,9 @@ class Calculator extends State<CalculatorApp> {
   }
   void _product() {
     if (_formKey.currentState.validate()) {
-      double num1 = double.parse(_controllerNum1.text);
-      double num2 = double.parse(_controllerNum2.text);
-      double result = num1 * num2;
+      int num1 = int.parse(_controllerNum1.text);
+      int num2 = int.parse(_controllerNum2.text);
+      int result = num1 * num2;
 
       setState(() {
         _resultText = "$num1 * $num2 = $result";
@@ -59,12 +59,12 @@ class Calculator extends State<CalculatorApp> {
   }
   void _quotient() {
     if (_formKey.currentState.validate()) {
-      double num1 = double.parse(_controllerNum1.text);
-      double num2 = double.parse(_controllerNum2.text);
-      double result = num1 - num2;
+      int num1 = int.parse(_controllerNum1.text);
+      int num2 = int.parse(_controllerNum2.text);
+      double result = num1 / num2;
 
       setState(() {
-        _resultText = "$num1/$num2 = $result";
+        _resultText = "$num1 / $num2 = $result";
       });
     }
   }
@@ -82,10 +82,18 @@ class Calculator extends State<CalculatorApp> {
           children: <Widget>[
             TextFormField(
               controller: _controllerNum1,
+              validator: (value) {
+                if (value.isEmpty) return "Please enter a number";
+              },
+              decoration: InputDecoration(hintText: "Enter Value 1"),
               keyboardType: TextInputType.number,
             ),
             TextFormField(
               controller: _controllerNum2,
+              validator: (value) {
+                if (value.isEmpty) return "Please enter a number";
+              },
+              decoration: InputDecoration(hintText: "Enter Value 2"),
               keyboardType: TextInputType.number,
             ),
 
