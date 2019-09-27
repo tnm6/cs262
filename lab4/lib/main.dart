@@ -1,3 +1,6 @@
+/// Lab4 for CS262, following the Google Codelab:
+/// https://codelabs.developers.google.com/codelabs/first-flutter-app-pt1/
+
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
@@ -7,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Startup Name Generator',
+      title: 'Startup Name Generator (Lab4)',
       home: RandomWords(),
     );
   }
@@ -26,7 +29,7 @@ class RandomWordsState extends State<RandomWords> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Startup Name Generator'),
+        title: Text('Startup Name Generator (Lab4)'),
       ),
       body: _buildSuggestions(),
     );
