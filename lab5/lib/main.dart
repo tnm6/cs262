@@ -1,3 +1,6 @@
+/// Lab5 for CS262, following the Google Codelab:
+/// https://codelabs.developers.google.com/codelabs/first-flutter-app-pt2/
+
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
