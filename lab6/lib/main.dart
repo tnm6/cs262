@@ -22,9 +22,13 @@ class ChatScreen extends StatefulWidget {
 class ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
   final List<ChatMessage> _messages = <ChatMessage>[];
   final TextEditingController _textController = new TextEditingController();
+  bool _isComposing = false;
 
   void _handleSubmitted(String text) {
     _textController.clear();
+    setState(() {
+      _isComposing = false;
+    });
     ChatMessage message = new ChatMessage(
       text: text,
       animationController: new AnimationController(
@@ -48,6 +52,11 @@ class ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
             new Flexible(
               child: new TextField(
                 controller: _textController,
+                onChanged: (String text) {
+                  setState(() {
+                    _isComposing = text.length > 0;
+                  });
+                },
                 onSubmitted: _handleSubmitted,
                 decoration: new InputDecoration.collapsed(
                   hintText: "Send a message"),
