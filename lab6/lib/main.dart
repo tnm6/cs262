@@ -1,3 +1,6 @@
+/// Lab 6 for CS262, following this Google Codelab:
+/// https://codelabs.developers.google.com/codelabs/flutter/
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
