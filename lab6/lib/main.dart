@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(new FriendlychatApp());
-
 const String _name = "Nathan";
+
+void main() => runApp(new FriendlychatApp());
 
 class FriendlychatApp extends StatelessWidget {
   @override
