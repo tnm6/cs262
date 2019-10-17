@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() => runApp(SharedPreferences());
+void main() => runApp(SharedPreferencesDemo());
 
-class SharedPreferences extends StatelessWidget {
+class SharedPreferencesDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,7 +24,41 @@ class SharedPreferencesPage extends StatefulWidget {
 
 class SharedPreferencesState extends State<SharedPreferencesPage> {
   String data = '';
+  String nameKey = '_key_name';
   TextEditingController controller = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    const MethodChannel('plugins.flutter.io/shared_preferences')
+        .setMockMethodCallHandler(
+      (MethodCall methodcall) async {
+        if(methodcall.method == 'getAll'){
+          return {'flutter.' + nameKey: '[ No Name Saved ]'};
+        }
+        return null;
+      },
+    );
+    setData();
+  }
+
+  Future<bool> saveData() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    return await preferences.setString(nameKey, controller.text);
+  }
+
+  Future<String> loadData() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    return preferences.getString(nameKey);
+  }
+
+  setData() {
+    loadData().then((value) {
+      setState(() {
+        data = value;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +79,7 @@ class SharedPreferencesState extends State<SharedPreferencesPage> {
             OutlineButton(
               child: Text('SAVE NAME'),
               onPressed: (){
-
+                saveData();
               },
             ),
             Text(
@@ -55,7 +89,7 @@ class SharedPreferencesState extends State<SharedPreferencesPage> {
             OutlineButton(
               child: Text('LOAD NAME'),
               onPressed: (){
-
+                setData();
               },
             )
           ],
