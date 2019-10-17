@@ -1,3 +1,9 @@
+/// Homework 2 is a simple app which uses SavedPreferences in order to save
+/// and load one name value
+/// 
+/// Based on this tutorial by The Mobile Programmer:
+///   https://youtu.be/Me22B6lR8Xc
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -10,7 +16,7 @@ class SharedPreferencesDemo extends StatelessWidget {
     return MaterialApp(
       title: 'Shared Preferences (Homework 2)',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
       home: SharedPreferencesPage(),
     );
