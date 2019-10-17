@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(SharedPreferences());
 
@@ -21,6 +23,9 @@ class SharedPreferencesPage extends StatefulWidget {
 }
 
 class SharedPreferencesState extends State<SharedPreferencesPage> {
+  String data = '';
+  TextEditingController controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +38,26 @@ class SharedPreferencesState extends State<SharedPreferencesPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
+            TextField(
+              controller: controller,
+              decoration: InputDecoration.collapsed(hintText: 'Enter Name'),
+            ),
+            OutlineButton(
+              child: Text('SAVE NAME'),
+              onPressed: (){
 
+              },
+            ),
+            Text(
+              data,
+              style: TextStyle(fontSize: 20),
+            ),
+            OutlineButton(
+              child: Text('LOAD NAME'),
+              onPressed: (){
+
+              },
+            )
           ],
         ),
       ),
