@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "201503998182",
+    "firebase_url": "https://lab-9-baby-names.firebaseio.com",
+    "project_id": "lab-9-baby-names",
+    "storage_bucket": "lab-9-baby-names.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201503998182:android:5b1c38f9a95a8d01e27b27",
+        "android_client_info": {
+          "package_name": "com.example.lab9"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "201503998182-8pkh3ehcgj71uhr0u1crp02oi0fe866c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgClPFbsLQ1rW8bzHPLO3FBT3JDc-xP8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "201503998182-8pkh3ehcgj71uhr0u1crp02oi0fe866c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "201503998182-v5e7afdh6h9rncnkt3u1a4la7mb9ppsf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.lab9"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
