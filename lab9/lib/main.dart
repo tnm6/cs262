@@ -1,3 +1,6 @@
+/// Simple Firebase app based upon this tutorial:
+/// https://codelabs.developers.google.com/codelabs/flutter-firebase/
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
