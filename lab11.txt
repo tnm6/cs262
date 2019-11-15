@@ -1,0 +1,6 @@
+# Lab 11
+
+## Exercise 11.1
+Professor VanderLinden told us to submit this explanation why the reformatter and analysis doesn't apply to Dart.
+- The reformatter for the Dart code collapses the parentheses which isn't the formatting that we want for our code. We want the parentheses to align with the top of the code block. Dart relies on nested widgets and those parentheses make it clear what is nested inside what.
+- The analysis doesn't work for Dart.
